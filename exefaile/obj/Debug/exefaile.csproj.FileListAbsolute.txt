@@ -1,0 +1,8 @@
+D:\kybik\exefaile\bin\Debug\exefaile.exe.config
+D:\kybik\exefaile\bin\Debug\exefaile.exe
+D:\kybik\exefaile\bin\Debug\exefaile.pdb
+D:\kybik\exefaile\obj\Debug\exefaile.csproj.AssemblyReference.cache
+D:\kybik\exefaile\obj\Debug\exefaile.csproj.SuggestedBindingRedirects.cache
+D:\kybik\exefaile\obj\Debug\exefaile.csproj.CoreCompileInputs.cache
+D:\kybik\exefaile\obj\Debug\exefaile.exe
+D:\kybik\exefaile\obj\Debug\exefaile.pdb
