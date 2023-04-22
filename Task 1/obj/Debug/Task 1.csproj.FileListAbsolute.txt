@@ -1,0 +1,8 @@
+D:\PALM\lb4_v4\Task 1\bin\Debug\Task 1.exe.config
+D:\PALM\lb4_v4\Task 1\bin\Debug\Task 1.exe
+D:\PALM\lb4_v4\Task 1\bin\Debug\Task 1.pdb
+D:\PALM\lb4_v4\Task 1\obj\Debug\Task 1.csproj.AssemblyReference.cache
+D:\PALM\lb4_v4\Task 1\obj\Debug\Task 1.csproj.SuggestedBindingRedirects.cache
+D:\PALM\lb4_v4\Task 1\obj\Debug\Task 1.csproj.CoreCompileInputs.cache
+D:\PALM\lb4_v4\Task 1\obj\Debug\Task 1.exe
+D:\PALM\lb4_v4\Task 1\obj\Debug\Task 1.pdb

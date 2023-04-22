@@ -1,0 +1,8 @@
+D:\PALM\lb4_git\task_2_v4\bin\Debug\task_2_v4.exe.config
+D:\PALM\lb4_git\task_2_v4\bin\Debug\task_2_v4.exe
+D:\PALM\lb4_git\task_2_v4\bin\Debug\task_2_v4.pdb
+D:\PALM\lb4_git\task_2_v4\obj\Debug\task_2_v4.csproj.AssemblyReference.cache
+D:\PALM\lb4_git\task_2_v4\obj\Debug\task_2_v4.csproj.SuggestedBindingRedirects.cache
+D:\PALM\lb4_git\task_2_v4\obj\Debug\task_2_v4.csproj.CoreCompileInputs.cache
+D:\PALM\lb4_git\task_2_v4\obj\Debug\task_2_v4.exe
+D:\PALM\lb4_git\task_2_v4\obj\Debug\task_2_v4.pdb
