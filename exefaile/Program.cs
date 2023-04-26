@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -86,7 +86,7 @@ namespace exefaile
             {
                 Console.Write(massiv[i] + " ");
             }
-            
+
 
         }
         static void FirstProblemV()
@@ -100,40 +100,60 @@ namespace exefaile
                 array[i] = Convert.ToInt32(data[i]);
             }
             Outputmass(array);
-           
+
         }
 
         static void Main(string[] args)
         {
-            axmed:
+        axmed:
             Console.WriteLine("Виберiть яке завдання хочете виконати");
             Console.WriteLine("1 буде виконуватись завдання з одновимiрним масивом 2 завдання з зубчастим");
 
             int x = int.Parse(Console.ReadLine());
-            
+
             switch (x)
             {
                 case 1:
                     Console.WriteLine("Оберiть виконувача 1) Pavel , 2) Valentyn");
-                    Netypu:
-                    int y = int.Parse(Console.ReadLine());                  
+                Netypu:
+                    int y = int.Parse(Console.ReadLine());
                     switch (y)
                     {
                         case 1:
-                           FirstProblemP();
+                            FirstProblemP();
                             break;
-                            case 2:
+                        case 2:
                             FirstProblemV();
+                            
                             break;
                         default:
                             Console.WriteLine("Iншого виконувача не iснує, оберiть одного iз наявних");
                             goto Netypu;
                     }
-                        break;
-                    case 2:
+                    Console.WriteLine("\npres 1 if u want...");
+                    int n = int.Parse(Console.ReadLine());
+                    if (n == 1)
+                    {
+                        if (y == 1)
+                        {
+                            FirstProblemP();
+                        }
+                        else if (y == 2)
+                        {
+                            FirstProblemV();
+                        }
+
+                        
+                    }
+                    break;
+
+                     
+                    
+
+                case 2:
                     Console.WriteLine("Оберiть виконувача 1) Pavel , 2) Valentyn");
                     int zz = int.Parse(Console.ReadLine());
-                    nameof:
+                nameof:
                     switch (zz)
                     {
                         case 1:
@@ -146,16 +166,30 @@ namespace exefaile
                             Console.WriteLine("Iншого виконувача не iснує, оберiть одного iз наявних");
                             goto nameof;
                     }
+                    Console.WriteLine("\npres 1 if u want...");
+                    int n1 = int.Parse(Console.ReadLine());
+                    if (n1 == 1)
+                    {
+                        if (zz == 1)
+                        {
+                            SecondProblemP(); 
+                        }
+                        else if (zz == 2)
+                        {
+                            SecondProblemV();
+                        }
+
+                    }
                     break;
                 default:
                     Console.WriteLine("Було введено значення яке не вiдповiдає умовi, повторiть спробу");
-                    goto axmed;                    
+                    goto axmed;
             }
             Console.WriteLine();
             Console.WriteLine("Хочите переглянути iншi завдання нажмiть 1 в iншому випадку програма зупинить свою роботу");
-             x = int.Parse(Console.ReadLine());
-            if (x ==1)
-             goto axmed; 
+            x = int.Parse(Console.ReadLine());
+            if (x == 1)
+                goto axmed;
 
         }
 
