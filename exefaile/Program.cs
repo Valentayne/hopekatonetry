@@ -91,6 +91,7 @@ namespace exefaile
         }
         static void FirstProblemV()
         {
+
             Console.WriteLine("Введiть розмiрнiсть масиву");
             int rows = int.Parse(Console.ReadLine());
             int[] array = new int[rows];
@@ -106,8 +107,8 @@ namespace exefaile
         static void Main(string[] args)
         {
         axmed:
-            Console.WriteLine("Виберiть яке завдання хочете виконати");
-            Console.WriteLine("1 буде виконуватись завдання з одновимiрним масивом 2 завдання з зубчастим");
+            Console.WriteLine("\tВиберiть яке завдання хочете виконати");
+            Console.Write("1 буде виконуватись завдання з одновимiрним масивом 2 завдання з зубчастим: ");
 
             int x = int.Parse(Console.ReadLine());
 
@@ -130,7 +131,7 @@ namespace exefaile
                             Console.WriteLine("Iншого виконувача не iснує, оберiть одного iз наявних");
                             goto Netypu;
                     }
-                    Console.WriteLine("\npres 1 if u want...");
+                    Console.Write("нажміть (1) якщо хочете повторити цю задачу і любу іншу якщо хочете піти далі: ");
                     int n = int.Parse(Console.ReadLine());
                     if (n == 1)
                     {
@@ -166,7 +167,7 @@ namespace exefaile
                             Console.WriteLine("Iншого виконувача не iснує, оберiть одного iз наявних");
                             goto nameof;
                     }
-                    Console.WriteLine("\npres 1 if u want...");
+                    Console.Write("нажміть (1) якщо хочете повторити цю задачу і любу іншу якщо хочете піти далі: ");
                     int n1 = int.Parse(Console.ReadLine());
                     if (n1 == 1)
                     {
