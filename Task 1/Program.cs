@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,10 +10,10 @@ namespace Task_1
     {
         static int[] FillArray()
         {
-            Console.WriteLine("Ввеліть к-ть елементі масиву");
+            Console.WriteLine("Введіть к-ть елементів масиву");
             int arrayLength = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Введіть елементи масиву, розділені пробілами: ");
+            Console.WriteLine("Введіть елементи масиву: ");
             string input = Console.ReadLine(); 
             string[] strArr = input.Split(); 
 
@@ -27,44 +27,88 @@ namespace Task_1
         }
         static void Main(string[] args)
         {
-            int[] arr = FillArray();
-            Console.Write("Введіть елемент масиву з якого начнеться видалення: ");
-            int k = int.Parse(Console.ReadLine());
-            Console.Write("Введіть к-ть елементів яку хочите видалити: ");
-            int t = int.Parse(Console.ReadLine());
+            Console.WriteLine("Оберіть формат заповнення: 1 - в ручну, 2 - рандомно");
+            int choice = int.Parse(Console.ReadLine());
 
-            RemoveElementsFromArray(ref arr, k, t);
+            int[] arr;
 
-            for (int i = 0; i < arr.Length; i++)
+            switch (choice)
             {
-                Console.Write(arr[i] + " ");
+                case 1:
+                    arr = FillArray();
+                    Console.WriteLine("Введіть елемент масиву з якого почнеться видалення: ");
+                    int k = int.Parse(Console.ReadLine());
+
+                    Console.WriteLine("Введіть к-ть елементів, які хочете видалити: ");
+                    int t = int.Parse(Console.ReadLine());
+
+                    RemoveElementsFromArray(ref arr, k, t);
+
+                    for (int i = 0; i < arr.Length; i++)
+                    {
+                        Console.Write(arr[i] + " ");
+                    }
+                    break;
+                case 2:
+                    Console.WriteLine("Введіть к-ть елементів масиву");
+                    int arrayLength = int.Parse(Console.ReadLine());
+                    arr = RandomFillArray(arrayLength);
+                    Console.WriteLine("Введіть елемент масиву з якого начнеться видалення: ");
+                    int start = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Введіть к-ть елементів яку хочите видалити: ");
+                    int count = int.Parse(Console.ReadLine());
+                    RemoveElementsFromArray(ref arr, start, count);
+                    for (int i = 0; i < arr.Length; i++)
+                    {
+                        Console.Write(arr[i] + " ");
+                    }
+                    break;
+
+                default:
+                    Console.WriteLine("Невірний вибір");
+                    return;
             }
+
 
             Console.ReadKey();
         }
+
         static void RemoveElementsFromArray(ref int[] arr, int k, int t)
         {
-            int elementsToRemove = Math.Min(t, arr.Length - k); // це к-ть ел дня видалення
+            int elementsToRemove = Math.Min(t, arr.Length - k); 
 
-            if (elementsToRemove <= 0) // той випадок якщо елементів нема
+            if (elementsToRemove <= 0)
             {
                 return;
             }
 
-            int newLength = arr.Length - elementsToRemove; // нова довжина масиву
+            int newLength = arr.Length - elementsToRemove;
             int[] newArr = new int[newLength];
 
-            for (int i = 0; i < k; i++) // переношу чистину масиву
+            for (int i = 0; i < k; i++) 
             {
                 newArr[i] = arr[i];
             }
 
             for (int i = k + elementsToRemove; i < arr.Length; i++) 
             {
-                newArr[i - elementsToRemove] = arr[i]; // копія масиву вже після видалення
+                newArr[i - elementsToRemove] = arr[i];
             }
 
             arr = newArr; 
         }
+        static int[] RandomFillArray(int length)
+        {
+            Random rnd = new Random();
+            int[] arr = new int[length];
+            for (int i = 0; i < length; i++)
+            {
+                arr[i] = rnd.Next(11);
+            }
+            Console.WriteLine("масив: ");
+            Console.WriteLine(string.Join(" ", arr));
+            return arr;
+        }
+
     }
 }
